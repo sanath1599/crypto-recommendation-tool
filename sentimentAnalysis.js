@@ -1,4 +1,6 @@
 import axios from 'axios';
+import dotenv from 'dotenv';
+dotenv.config();
 
 /**
  * Analyzes sentiment of each article's title by sending a prompt to the Llama API.
@@ -12,7 +14,7 @@ export async function analyzeSentiment(articles) {
 
     try {
       const response = await axios.post('http://localhost:11434/api/generate', {
-        model: 'llama3.2',
+        model: process.env.LLAMA_MODEL,
         prompt,
         stream: false
       }, {

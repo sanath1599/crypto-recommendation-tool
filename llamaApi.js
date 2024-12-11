@@ -1,14 +1,17 @@
 import axios from 'axios';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const llamaApiCall = async (prompt, format) => {
   const llamaEndpoint = 'http://localhost:11434/api/generate';
 
   try {
     const response = await axios.post(llamaEndpoint, {
-      model: 'llama3.2',
+      model: process.env.LLAMA_MODEL,
       prompt,
       stream: false,
       format,
+
     });
 
     if (response?.data?.response) {
