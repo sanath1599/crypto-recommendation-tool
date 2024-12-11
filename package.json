@@ -1,0 +1,23 @@
+{
+  "name": "crypto-recommendation-tool",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "cryptoTool.js",
+  "scripts": {
+    "start": "node cryptoTool.js"
+  },
+  "dependencies": {
+    "asciichart": "^1.5.25",
+    "axios": "^0.27.2",
+    "blessed": "^0.1.81",
+    "chalk": "^5.3.0",
+    "cheerio": "^1.0.0",
+    "cli-table3": "^0.6.5",
+    "dotenv": "^16.4.7",
+    "fs": "^0.0.1-security",
+    "inquire": "^0.4.8",
+    "inquirer": "^8.2.6",
+    "node-fetch": "^3.2.0",
+    "xml2js": "^0.6.2"
+  }
+}
